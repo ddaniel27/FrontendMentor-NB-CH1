@@ -1,0 +1,93 @@
+:root{
+    --main-background: hsl(233, 47%, 7%);
+    --card-background: hsl(244, 38%, 16%);
+    --accent: hsl(277, 64%, 61%);
+    --white: hsl(0, 0%, 100%);
+    --main-paragraph: hsla(0, 0%, 100%, 0.75);
+    --stats-heading: hsla(0, 0%, 100%, 0.6);
+}
+
+*{
+    padding:0;
+    margin:0;
+}
+
+body{
+    background-color: var(--main-background);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.card{
+    background-color: var(--card-background);
+    border-radius: 7px;
+    display: flex;
+    margin: 20vh 12.5vw;
+    height: 55vh;
+    width:66vw;
+}
+
+.accent{
+    color: var(--accent);
+}
+
+h1,h3{
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+p{
+    color: var(--main-paragraph);
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.7;
+    width: 90%;
+}
+.main-paragraph{
+    margin-bottom: 3rem;
+}
+.subtitle{
+    font-size: 11px;
+}
+.info{
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+    margin:3.5rem;
+    margin-bottom: 2.5rem;
+}
+.info .stats{
+    display: flex;
+    justify-content:flex-start;
+}
+.min-stat *{
+    padding: 0 3.5rem 0.5rem 0;
+}
+
+img{
+    border-radius: 0 7px 7px 0;
+    filter: invert(20%) sepia(10%) saturate(2500%) hue-rotate(225deg) brightness(60%) contrast(100%);
+}
+
+@media screen and (max-width: 719px){
+    .card{
+        flex-direction:column-reverse;
+        height:120vh;
+        width:80%;
+    }
+    .info{
+        margin: 1rem;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+    }
+    .info .stats{
+        flex-direction: column;
+        text-align: center;
+    }
+    .min-stat *{
+        padding: 0;
+    }
+}
